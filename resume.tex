@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage{scalerel} % For inline image
+\usepackage{hyperref} % For URL
+\usepackage{fontawesome} % Github, Linkedin icon
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+% Nice icons for these things
+\newcommand*{\mobile}[1]{\faMobilePhone\ \href{tel:#1}{#1}}
+\newcommand*{\email}[1]{\footnotesize \faEnvelopeO\ \normalsize \href{mailto:#1}{#1}}
+\newcommand*{\github}[1]{\faGithub\ \href{https://github.com/#1}{github.com/#1}}
+\newcommand*{\linkedin}[1]{\faLinkedinSquare\ \href{https://www.linkedin.com/in/#1}{linkedin.com/in/#1}}
+
+\usepackage[left=0.5in,top=0.2in,right=0.5in,bottom=0.5in]{geometry} % Document margins
+
+\name{Zhongyang Liu} % Your name
+\address{11347 Nebraska Ave Apt 206, Los Angeles, CA 90025} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{\mobile{(310) 307-6728} $\cdot$ \email{jerrylzy@ucla.edu} $\cdot$ \github{jerrylzy} $\cdot$ \linkedin{jerrylzy}}%\\ % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%---------------------------------------------------------------------------------------- 
+
+\begin{rSection}{Education}
+
+{\bf University of California, Los Angeles} \hfill {Expected: \em Fall 2018} \\ 
+B.S. Computer Science, B.S. Applied Mathematics
+\begin{rSubsection}{}{}{}{}
+\item Overall GPA: 3.97. Major GPA: 3.98. UPE honor society member / tutor. 
+\item Interested in backend, distributed systems, AI, and linguistics.
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{Microsoft Corporation}{June 2017 - September 2017}{Software Engineer Intern}{San Francisco, CA}
+\item Migrated MileIQ Zendesk app to its latest SDK. Parsed external data to help the customer support team quickly familiarize themselves with users' issues and try to retain them by prioritizing their tickets automatically.
+\item Used the \texttt{Extra-Tree} model to select features and predict user unsubscription rate, which improved\\
+\textit{accuracy} on test data to 91\%, a significant lift from 77\% of the existing model.
+\item Used a 4-layer neural network to build an email classifier with CNTK where word counts and relative location are used as input. The trained model provides close to 90\% \textit{accuracy, precision} and \textit{recall} on test data set.
+\item Hosted a client-server model where the client securely sends customer emails to a Docker-containerized Python \texttt{flask} server on Azure Web App and displays the server's prediction to customer support agents.
+\end{rSubsection}
+
+\begin{rSubsection}{Symantec Corporation}{April 2017 - June 2017}{Software Engineer Intern}{Culver City, CA}
+\item Worked on Java server backend dealing with both frontend UI and Oracle SQL database.
+\item Increased \textit{campaign name} size limit and implemented a new search option with an exact SQL query on\\ 
+\textit{campaign IDs} to help the marketing team detail their campaigns and use their legacy ID search tools.
+\item Designed an API to exclude certain IDs from the database and filter results based on time of creation.\\
+It is the cornerstone for a new website that visualizes a chain of campaigns for the marketing team.
+\end{rSubsection}
+
+\begin{rSubsection}{Daily Bruin Online, UCLA}{September 2016 - April 2017}{Web Developer Intern}{Los Angeles, CA}
+\item Contributed to a flatpage generator with \texttt{React}, \texttt{Node.js} and \texttt{MongoDB} that helps Daily Bruin editors easily input contents, i.e. header, image, text body, etc., and customize the page layout to generate desired pages.
+\item Wrote REST procedures to get, store, or delete objects in MongoDB obtained from frontend.
+\end{rSubsection}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECT SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Simpleton Shell}{Winter 2017}{Operating Systems}{Los Angeles, CA}
+\item {Light weight shell written in C that accepts commands, arguments and file flags, and prints out programs' output, exit status and arguments with much better user time performance than both \texttt{bash} and \texttt{dash}.}
+\item {Used \texttt{open}, \texttt{close}, \texttt{dup2} to operate on files with various flags; parsed arguments from input with \texttt{optind}; used \texttt{fork}, \texttt{execvp} to run a child process with the desired program and appropriate arguments; used \texttt{pipe} to redirect output of one program to another and \texttt{waitpid} to get a child's exit status and print it out to the terminal.}
+\item {Designed an algorithm to efficiently delete information about child processes after the parent prints out the children's exit status and arguments.}
+\end{rSubsection}
+
+%\begin{rSubsection}{Application Server Herd}{Fall 2016}{Python and Twisted Server Framework}{Los Angeles, CA}
+%\item {A prototype of a Twisted client-server program in Python that receives, propagates and outputs GPS locations.}
+%\item {Used \texttt{Deferred} objects from the Twisted framework to asynchronously retrieve JSON data from Google Places API.}
+%\item {Used a hashmap from client IDs to timestamps and designed an algorithm to parse and compare timestamps from strings.}
+%\item Implemented a simple flooding algorithm to propagate location info among servers. A server will propagate info if it does not have or only has an older location about a specific client.
+%\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages & C/C++, Python, Javascript, Java, MATLAB / Octave, Shell Script\\
+%Databases & MySQL, PostgreSQL, Microsoft SQL \\
+Tools & Git, UNIX/Linux, pandas, numpy, sklearn, CNTK, \LaTeX, Jupyter, flask, GDB
+\end{tabular}
+
+\end{rSection}
+
+\end{document}
