@@ -52,7 +52,7 @@
 B.S. Computer Science, B.S. Applied Mathematics
 \begin{rSubsection}{}{}{}{}
 \item Overall GPA: 3.97. Major GPA: 3.98. UPE honor society member / tutor. 
-\item Interested in backend, distributed systems, AI, and linguistics.
+% \item Interested in backend, distributed systems, AI, and linguistics.
 \end{rSubsection}
 
 \end{rSection}
@@ -62,6 +62,12 @@ B.S. Computer Science, B.S. Applied Mathematics
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
+
+\begin{rSubsection}{Microsoft Corporation}{June 2018 - Current}{Software Engineer Intern}{Redmond, WA}
+\item Built a prototype with Windows App Driver to automate the testing of desktop Office apps' WebView control. \item Fixed existing WebView test cases and used template pattern to greatly improve code reuse and clarity.\\
+This is essential to determine how future Office web add-in test automation will be done.
+\item Contributed to URL Embedding with fastText. Reduced the cost of a single cosine-similarity nearest neighbor prediction from 11s to 0.15s. Deployed it on Azure with \texttt{flask} \& Docker for easier and more secure access.
+\end{rSubsection}
 
 \begin{rSubsection}{Microsoft Corporation}{June 2017 - September 2017}{Software Engineer Intern}{San Francisco, CA}
 \item Migrated MileIQ Zendesk app to its latest SDK. Parsed external data to help the customer support team quickly familiarize themselves with users' issues and try to retain them by prioritizing their tickets automatically.
@@ -79,11 +85,6 @@ B.S. Computer Science, B.S. Applied Mathematics
 It is the cornerstone for a new website that visualizes a chain of campaigns for the marketing team.
 \end{rSubsection}
 
-\begin{rSubsection}{Daily Bruin Online, UCLA}{September 2016 - April 2017}{Web Developer Intern}{Los Angeles, CA}
-\item Contributed to a flatpage generator with \texttt{React}, \texttt{Node.js} and \texttt{MongoDB} that helps Daily Bruin editors easily input contents, i.e. header, image, text body, etc., and customize the page layout to generate desired pages.
-\item Wrote REST procedures to get, store, or delete objects in MongoDB obtained from frontend.
-\end{rSubsection}
-
 %------------------------------------------------
 
 %------------------------------------------------
@@ -96,7 +97,8 @@ It is the cornerstone for a new website that visualizes a chain of campaigns for
 
 \begin{rSection}{Projects}
 
-\begin{rSubsection}{Simpleton Shell}{Winter 2017}{Operating Systems}{Los Angeles, CA}
+% \begin{rSubsection}{Simpleton Shell}{Winter 2017}{Operating Systems}{Los Angeles, CA}
+\begin{rSubsection}{Simpleton Shell}{Winter 2017}{}{}
 \item {Light weight shell written in C that accepts commands, arguments and file flags, and prints out programs' output, exit status and arguments with much better user time performance than both \texttt{bash} and \texttt{dash}.}
 \item {Used \texttt{open}, \texttt{close}, \texttt{dup2} to operate on files with various flags; parsed arguments from input with \texttt{optind}; used \texttt{fork}, \texttt{execvp} to run a child process with the desired program and appropriate arguments; used \texttt{pipe} to redirect output of one program to another and \texttt{waitpid} to get a child's exit status and print it out to the terminal.}
 \item {Designed an algorithm to efficiently delete information about child processes after the parent prints out the children's exit status and arguments.}
